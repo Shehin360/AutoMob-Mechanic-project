@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Service</title>
+</head>
+<body>
+    <header>
+        <h3><a href="index.html">AutoMob-Mechanic</a></h3>
+        <nav>
+            <a href="home.html">Home</a> |
+            <a href="services.html">Services</a> |
+            <a href="booking.html">Booking</a> |
+            <a href="mailto:contact@automob.co.in">contact@automob.co.in</a> |
+            <span>999 999 9999 ☎</span>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        <h2>Book Your Service</h2>
+        <form action="appointment.html" method="POST" autocomplete="on" novalidate>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email Id:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="code">Phone Number:</label>
+            <input type="text" id="code" name="code" placeholder="code" size="4" required>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="9823322332" required><br><br>
+
+            <label for="service">Select Service:</label>
+            <select id="service" name="service" required>
+                <option value="">--Select--</option>
+                <option value="preventive">Preventive Maintenance Service</option>
+                <option value="body-repair">Body Repair Service</option>
+                <option value="car-care">Car Care Service</option>
+            </select><br><br>
+
+            <label for="make">Car Make:</label>
+            <input type="text" id="make" name="make" placeholder="Suzuki, Toyota..." list="car-makes" required>
+            <datalist id="car-makes">
+                <option value="Mahindra">
+                <option value="Honda">
+                <option value="Hyundai">
+                <option value="Ford">
+                <option value="Toyota">
+                <option value="Nissan">
+                <option value="Suzuki">
+                <option value="BMW">
+                <option value="Mercedes-Benz">
+                <option value="Audi">
+                <option value="Volkswagen">
+                <option value="Skoda">
+                <option value="Renault">
+                <option value="Kia">
+                <option value="MG">
+            </datalist>
+            <br><br>
+
+            <label for="model">Car Model:</label>
+            <input type="text" id="model" name="model" placeholder="Alto, Innova..." required><br><br>
+
+            <label>Fuel Type:</label>
+            <input type="radio" id="petrol" name="fuel" value="Petrol" required><label for="petrol">Petrol</label>
+            <input type="radio" id="diesel" name="fuel" value="Diesel"><label for="diesel">Diesel</label>
+            <input type="radio" id="lpg" name="fuel" value="LPG"><label for="lpg">LPG</label>
+            <input type="radio" id="others" name="fuel" value="Others"><label for="others">Others</label><br><br>
+
+            <label for="kms">Kilometers Ran:</label>
+            <input type="number" id="kms" name="kms" placeholder="...km" required><br><br>
+
+            <button type="submit">Schedule an Appointment</button>
+        </form>
+    </main>
+
+    <footer>
+        <hr>
+        <p>Copyright © 2020 AutoMob-Mechanic. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

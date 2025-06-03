@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Your Appointment</title>
+</head>
+<body>
+    <header>
+        <h3><a href="index.html">AutoMob-Mechanic</a></h3>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="services.html">Services</a> |
+            <a href="booking.html">Booking</a> |
+            <a href="mailto:contact@automob.co.in">contact@automob.co.in</a> |
+            <span>999 999 9999 ☎</span>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        <h2>Schedule Your Appointment</h2>
+        <form action="booking-success.html" method="POST" autocomplete="off" novalidate>
+            <label for="appointment-date">Appointment Date:</label>
+            <input type="date" id="appointment-date" name="appointment-date" required><br><br>
+
+            <label for="address">Address:</label><br>
+            <textarea id="address" name="address" rows="5" cols="40" required></textarea><br><br>
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" placeholder="Mumbai, Pune..." list="cities" required>
+            <datalist id="cities">
+                <option value="Mumbai">
+                <option value="Pune">
+                <option value="Delhi">
+                <option value="Bangalore">
+                <option value="Chennai">
+                <option value="Kolkata">
+                <option value="Hyderabad">
+            </datalist>
+            <br><br>
+
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" placeholder="Kerala, Maharashtra..." list="states" required>
+            <datalist id="states">
+                <option value="Assam">
+                <option value="Bihar">
+                <option value="Gujarat">
+                <option value="Goa">
+                <option value="Kerala">
+                <option value="Maharashtra">
+                <option value="Karnataka">
+                <option value="Tamil Nadu">
+                <option value="Uttar Pradesh">
+                <option value="West Bengal">
+            </datalist>
+            <br><br>
+
+            <label>Send Notification:</label>
+            <input type="checkbox" id="email-notification" name="notification[]" value="Email" required><label for="email-notification">Email</label>
+            <input type="checkbox" id="sms-notification" name="notification[]" value="SMS"><label for="sms-notification">SMS</label>
+            <br><br>
+
+            <button type="submit">Book</button>
+        </form>
+    </main>
+
+    <footer>
+        <hr>
+        <p>Copyright © 2020 AutoMob-Mechanic. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
